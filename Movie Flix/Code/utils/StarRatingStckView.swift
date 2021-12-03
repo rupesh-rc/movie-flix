@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RatingController: UIStackView {
+class StarRatingStckView: UIStackView {
     var starsRating = 0
     var starsEmptyPicName = "star" // change it to your empty star picture name
     var starsFilledPicName = "star.fill" // change it to your filled star picture name
@@ -23,7 +23,7 @@ class RatingController: UIStackView {
                 starTag = starTag + 1
             }
         }
-       setStarsRating(rating:starsRating)
+        setStarsRating(rating:starsRating)
     }
     func setStarsRating(rating:Int){
         self.starsRating = rating
@@ -39,6 +39,6 @@ class RatingController: UIStackView {
         }
     }
     @objc func pressed(sender: UIButton) {
-        setStarsRating(rating: sender.tag)
+        // setStarsRating(rating: sender.tag)
     }
 }
